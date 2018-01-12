@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Boostrap Most Recent  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- Link to CSS Reset -->
+	<link rel="stylsheet" type="text/css" link="Assets/CSS/reset.css">
+	<!-- Link to CSS just in case -->
+	<link rel="stylesheet" type="text/css" link="Assets/CSS/style.css">
+	<!-- Always have a Favicon -->
+	<link rel="shortcut icon" href="Assets/Images/train.ico" type="image/x-icon">
+
+
+	<title>RockPaperScissors</title>
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
+		<div class="col">
+			<h1>Train Scheduler Beta</h1>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 bg-warning">
+			</div>
+			<div class="col-md-4 bg-primary text-center text-justify">
+				<h2>Guess the Letter of the Clue Using your Keyboard</h2>
+				<p id="guesses-remaining">You get 15 guesses.</p>
+				<p id="wrong-guesses">Wrong Guesses: </p>
+				<p id ="win-count">Player Wins: </p>
+				<p id="loss-count">Player Losses: </p>
+				<h3 id="word-blank">_ _ _ _ _</h3>
+			</div>
+			<div class="col-md-4 bg-danger">
+			</div>
+		</div>
+
+		<div>
+			<!-- Chat Will Go Here -->
+		</div>
+
+	</div>
+
+	<footer class="footer pt-3 bg-info">
+		<div class="container text-center">
+			<span class="">&copy;Ben Cross 2017</span>
+		</div>
+	</footer>
+
+<!-- LINK TO FIREBASE GOES HERE -->
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>	
+
+<!-- Link to JavaScript -->
+<script src="Assets/Javascript/app.js"></script>
+
+</body>
+</html>
