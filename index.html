@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- Boostrap Most Recent  -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<!-- Link to CSS Reset -->
 	<link rel="stylsheet" type="text/css" link="Assets/CSS/reset.css">
 	<!-- Link to CSS just in case -->
@@ -12,42 +12,105 @@
 	<link rel="shortcut icon" href="Assets/Images/train.ico" type="image/x-icon">
 
 
-	<title>RockPaperScissors</title>
+	<title>Train Scheduler Beta</title>
 </head>
 <body>
-	<div class="jumbotron jumbotron-fluid text-center bg-dark text-white">
-		<div class="col">
-			<h1>Train Scheduler Beta</h1>
-		</div>
-	</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4 bg-warning">
-			</div>
-			<div class="col-md-4 bg-primary text-center text-justify">
-				<h2>Guess the Letter of the Clue Using your Keyboard</h2>
-				<p id="guesses-remaining">You get 15 guesses.</p>
-				<p id="wrong-guesses">Wrong Guesses: </p>
-				<p id ="win-count">Player Wins: </p>
-				<p id="loss-count">Player Losses: </p>
-				<h3 id="word-blank">_ _ _ _ _</h3>
-			</div>
-			<div class="col-md-4 bg-danger">
-			</div>
-		</div>
+  <div class="container">
 
-		<div>
-			<!-- Chat Will Go Here -->
-		</div>
+    <br>
 
-	</div>
+    <!-- Jumbotron -->
+    <div class="jumbotron bg-info">
+      <h1 class="text-center">Train Scheduler Beta</h1>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-info">
+            <h4 class="card-title text-center">Current Train Schedule</h4>
+          </div>
+          <div class="card-body">
+              <table class="table form-primary">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+	<!-- Blank Space -->
+    <div class="col-lg-3">
+    </div>
+
+      <!-- Add Train Panel-->
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header bg-info">
+            <h4 class="card-title text-center">Add Train</h4>
+          </div>
+          <div class="card-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group">
+                <label for="name-input">Train Name:</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="dest-input">Destination</label>
+                <input class="form-control" id="dest-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="time-input">First Train Time (HH:mm - Military Time)</label>
+                <input class="form-control" id="time-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="freq-input">Arrival Frequency (in minutes)</label>
+                <input class="form-control" id="freq-input" type="number"></input>
+              </div>
+              <button class="btn btn-default" id="submitBtn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blank Space -->
+      <div class="col-lg-3">
+      </div>
+
+    </div>
+
+  </div>
 	<footer class="footer pt-3 bg-info">
 		<div class="container text-center">
-			<span class="">&copy;Ben Cross 2017</span>
+			<span class="">&copy;Ben Cross 2018</span>
 		</div>
 	</footer>
+
+<!-- Link to JQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+  </script>
+
+<!-- Link to Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>  
 
 <!-- LINK TO FIREBASE GOES HERE -->
 <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>	
